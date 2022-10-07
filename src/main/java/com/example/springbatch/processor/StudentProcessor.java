@@ -13,7 +13,7 @@ public class StudentProcessor implements ItemProcessor<StudentDto, Student> {
     @Override
     public Student process(StudentDto studentDto) throws Exception {
         Student student = new Student();
-        student.setStudentId(studentDto.getEmployeeId()+new Random().nextInt(10000000));
+        student.setStudentId(studentDto.getStudentId()+new Random().nextInt(10000000));
         student.setFirstName(studentDto.getFirstName());
         student.setLastName(studentDto.getLastName());
         student.setEmail(studentDto.getEmail());

@@ -86,7 +86,7 @@ public class StudentDemoJob {
     public JdbcBatchItemWriter<Student> studentDBWriterDefault() {
         JdbcBatchItemWriter<Student> itemWriter = new JdbcBatchItemWriter<Student>();
         itemWriter.setDataSource(dataSource);
-        itemWriter.setSql("insert into student (student_id, first_name, last_name, email, age) values (:employeeId, :firstName, :lastName, :email, :age)");
+        itemWriter.setSql("insert into student (student_id, first_name, last_name, email, age) values (:studentId, :firstName, :lastName, :email, :age)");
         itemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Student>());
         return itemWriter;
     }
